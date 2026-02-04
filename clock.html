@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clock - SmartWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/clock.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">SmartWeb</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="weather.html">API</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tools</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="calculator.html">Calculator</a></li>
+            <li><a class="dropdown-item active" href="clock.html">Clock</a></li>
+            <li><a class="dropdown-item" href="todo.html">Todo App</a></li>
+            <li><a class="dropdown-item" href="game.html">Game</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><button class="btn btn-outline-light ms-3" onclick="toggleTheme()">🌙</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container text-center">
+    <h1>Live Clock</h1>
+    <p>Digital clock, analog clock, and stopwatch all in one</p>
+    <a href="#clock" class="btn btn-primary">View Clock</a>
+  </div>
+</section>
+
+<section class="py-5" id="clock">
+  <div class="container text-center">
+    <h1 class="mb-5">Live Clock</h1>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Digital Clock</h3>
+        <div class="digital-clock" id="digitalClock"></div>
+        <p class="mt-3" id="dateDisplay"></p>
+      </div>
+      
+      <div class="col-md-6">
+        <h3>Analog Clock</h3>
+        <div class="analog-clock">
+          <div class="hand hour-hand" id="hourHand"></div>
+          <div class="hand minute-hand" id="minuteHand"></div>
+          <div class="hand second-hand" id="secondHand"></div>
+          <div class="center-dot"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Stopwatch</h4>
+        <div class="digital-clock" id="stopwatch">00:00:00</div>
+        <button class="btn btn-success me-2" onclick="startStopwatch()">Start</button>
+        <button class="btn btn-warning me-2" onclick="pauseStopwatch()">Pause</button>
+        <button class="btn btn-danger" onclick="resetStopwatch()">Reset</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="css/js/theme.js"></script>
+<script src="css/js/clock.js"></script>
+</body>
+</html>

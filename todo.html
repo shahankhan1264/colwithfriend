@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App - SmartWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/todo.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">SmartWeb</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="weather.html">API</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tools</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="calculator.html">Calculator</a></li>
+            <li><a class="dropdown-item" href="clock.html">Clock</a></li>
+            <li><a class="dropdown-item active" href="todo.html">Todo App</a></li>
+            <li><a class="dropdown-item" href="game.html">Game</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><button class="btn btn-outline-light ms-3" onclick="toggleTheme()">🌙</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container text-center">
+    <h1>Todo App</h1>
+    <p>Organize your tasks and boost your productivity</p>
+    <a href="#todo" class="btn btn-primary">Manage Tasks</a>
+  </div>
+</section>
+
+<section class="py-5" id="todo">
+  <div class="container">
+    <h1 class="text-center mb-5">Todo App</h1>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        
+        <!-- Add Todo Form -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" id="todoInput" placeholder="Add a new task..." onkeypress="handleEnter(event)">
+              <button class="btn btn-primary" onclick="addTodo()">Add Task</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="text-center mb-4">
+          <button class="btn btn-outline-secondary me-2" onclick="filterTodos('all')">All</button>
+          <button class="btn btn-outline-success me-2" onclick="filterTodos('active')">Active</button>
+          <button class="btn btn-outline-warning" onclick="filterTodos('completed')">Completed</button>
+        </div>
+        
+        <!-- Todo Stats -->
+        <div class="todo-stats mb-4">
+          <div class="row text-center">
+            <div class="col-4">
+              <h5 id="totalTasks">0</h5>
+              <small>Total Tasks</small>
+            </div>
+            <div class="col-4">
+              <h5 id="activeTasks">0</h5>
+              <small>Active</small>
+            </div>
+            <div class="col-4">
+              <h5 id="completedTasks">0</h5>
+              <small>Completed</small>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Todo List -->
+        <div id="todoList"></div>
+        
+        <!-- Clear All Button -->
+        <div class="text-center mt-4">
+          <button class="btn btn-danger" onclick="clearAllTodos()">Clear All Tasks</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="css/js/theme.js"></script>
+<script src="css/js/todo.js"></script>
+</body>
+</html>

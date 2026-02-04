@@ -1,0 +1,24 @@
+.calculator { 
+  max-width: 300px; 
+  margin: 0 auto; 
+}
+
+.calc-display { 
+  height: 60px; 
+  font-size: 24px; 
+  text-align: right; 
+}
+
+.calc-btn { 
+  height: 60px; 
+  font-size: 18px; 
+}
+
+.calc-btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.calc-btn:active {
+  transform: scale(0.95);
+}

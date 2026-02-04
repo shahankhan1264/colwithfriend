@@ -1,0 +1,27 @@
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.service-description {
+  color: #666;
+  line-height: 1.6;
+}

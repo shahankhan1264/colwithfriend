@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather API - SmartWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">SmartWeb</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link active" href="weather.html">API</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tools</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="calculator.html">Calculator</a></li>
+            <li><a class="dropdown-item" href="clock.html">Clock</a></li>
+            <li><a class="dropdown-item" href="todo.html">Todo App</a></li>
+            <li><a class="dropdown-item" href="game.html">Game</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><button class="btn btn-outline-light ms-3" onclick="toggleTheme()">🌙</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container text-center">
+    <h1>Weather API</h1>
+    <p>Get real-time weather information for any city</p>
+    <a href="#weather" class="btn btn-primary">Check Weather</a>
+  </div>
+</section>
+
+<section class="py-5" id="weather">
+  <div class="container">
+    <h1 class="text-center mb-5">Weather API Demo</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Current Weather</h5>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="cityInput" placeholder="Enter city name">
+            </div>
+            <button class="btn btn-primary" onclick="getWeather()">Get Weather</button>
+            
+            <div id="weatherResult" class="mt-4" style="display: none;">
+              <h4 id="cityName"></h4>
+              <p id="temperature"></p>
+              <p id="description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="css/js/theme.js"></script>
+<script src="css/js/weather.js"></script>
+</body>
+</html>
